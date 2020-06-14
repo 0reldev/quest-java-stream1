@@ -2,6 +2,8 @@ import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import static java.util.Locale.filter;
+
 public class Shield {
 
     public static void main(String[] args) {
@@ -17,16 +19,18 @@ public class Shield {
         heroes.add(new Hero("Hulk", 49, true));
         heroes.add(new Hero("Doctor Strange", 42, false));
 
-        List<Hero> elders;
-        // TODO 1 : filter heroes in order to found heroes older than 59
+        List<Hero> elders = heroes.stream()
+                .filter(hero -> hero.getAge() > 59)
+                .collect(Collectors.toList());
 
         System.out.println("\nElders:");
         for (Hero elder : elders) {
             System.out.println(elder.getName());
         }
 
-        List<Hero> intolerants;
-        // TODO 2 : filter heroes in order to found heroes that are gluten intolerants
+        List<Hero> intolerants = heroes.stream()
+                .filter(hero -> hero.isGlutenIntolerant() == true)
+                .collect(Collectors.toList());
 
         System.out.println("\nGluten intolerants:");
         for (Hero intolerant : intolerants) {
