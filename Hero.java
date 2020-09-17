@@ -1,18 +1,18 @@
 public class Hero {
 
-    // attributs
     private String name;
+
     private int age;
+
     private boolean glutenIntolerant;
 
-    // constructeurs
     public Hero(String name, int age, boolean glutenIntolerant) {
+
         this.name = name;
         this.age = age;
         this.glutenIntolerant = glutenIntolerant;
     }
 
-    // accesseurs (getters)
     public String getName() {
         return name;
     }
@@ -25,7 +25,6 @@ public class Hero {
         return glutenIntolerant;
     }
 
-    // mutateurs (setters)
     public void setName(String name) {
         this.name = name;
     }

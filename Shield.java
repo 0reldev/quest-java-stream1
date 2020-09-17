@@ -1,8 +1,5 @@
 import java.util.*;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
-
-import static java.util.Locale.filter;
 
 public class Shield {
 
@@ -25,6 +22,7 @@ public class Shield {
 
         System.out.println("\nElders:");
         for (Hero elder : elders) {
+
             System.out.println(elder.getName());
         }
 
@@ -34,6 +32,7 @@ public class Shield {
 
         System.out.println("\nGluten intolerants:");
         for (Hero intolerant : intolerants) {
+
             System.out.println(intolerant.getName());
         }
     }
